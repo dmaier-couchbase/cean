@@ -16,6 +16,14 @@ The tooling is based on:
 
 # How to use
 
+* Install the following on your development machine. For instance for Ubunut 14.04:
+** sudo apt-get install gcc
+** sudo apt-get make
+** sudo apt-get node
+** sudo apt-get npm
+** sudo apt-get nodejs-legacy
+** sudo npm install -g yo
+
 * Clone this repository
 ```
 git clone https://github.com/dmaier-couchbase/cean.git
