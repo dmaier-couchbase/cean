@@ -28,7 +28,7 @@ cd cean/src/yeoman-generators/generator-cean
 ```
 sudo npm link
 ```
-* Double check that you have permissions to $HOME/tmp, if not use 'chown' in order to change the owner of this directory!
+* Side note: Double check that you have permissions to $HOME/tmp, if not use 'chown' in order to change the owner of this directory!
 * Create a new project directory 
 ```
 cd --
@@ -38,7 +38,7 @@ mkdir myapp
 ```
 yo cean myapp
 ```
-* Answer the questions regarding 'Couchbase Host', 'Couchbase Bucket', 'Couchbase Password'! For instance:
+* Answer the questions regarding 'Couchbase Host', 'Couchbase Bucket', 'Couchbase Password'! Please also make sure that the bucket is existent and accessible with this password. For instance:
 ```
 == This is the Couchbase CEAN generator ==
 appname = myapp
@@ -59,3 +59,7 @@ node app.js
 ```
 http://192.168.7.162:9000/
 ```
+* Click on the 'Add Test Document' button
+* Also inspect the log output of your application
+* If everything worked fine then you get a success message.
+* Reload the page and you should see the just inserted message 'Hello Couchbase!'
