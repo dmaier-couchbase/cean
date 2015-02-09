@@ -88,4 +88,5 @@ Hello Couchbase!
 # TODO-s
 
 * Add sub-generators for controllers, ...
-* Add a grunt build script which allows to run the client and server side code seperatly or together
+* Add a Grunt build script which allows to run the client and server side code seperatly or together
+* Wrap the yo commands by providing a cean command line tool (E.G. 'cean init $appname' instead 'yo cean $appname')
