@@ -85,3 +85,7 @@ Hello Couchbase!
 # Screenshots
 ![alt tag](https://raw.github.com/dmaier-couchbase/cean/master/assets/screen.png)
 
+# TODO-s
+
+* Add sub-generators for controllers, ...
+* Add a grunt build script which allows to run the client and server side code seperatly or together
