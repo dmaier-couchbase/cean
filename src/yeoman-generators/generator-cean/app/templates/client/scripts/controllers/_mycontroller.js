@@ -34,10 +34,11 @@ app.controller('MyCtrl', function($scope, MyService) {
     
    //Execute when add is clicked
    $scope.onAddClicked = function () {
-          
+    
+       var id = "hello";
        var msg = "Hello Couchbase!";
        
-       MyService.add(key, msg).then(
+       MyService.add(id, msg).then(
          
            function(ctx) { 
             
