@@ -73,5 +73,11 @@ http://192.168.7.162:9000/
 ```
 * Click on the 'Add Test Document' button
 * Also inspect the log output of your application
-* If everything worked fine then you get a success message.
-* Reload the page and you should see the just inserted message 'Hello Couchbase!'
+* If everything worked fine then you get a success message:
+```
+Successfully added a document to your Couchbase bucket!
+```
+* Reload the page and you should see the just inserted message: 
+```
+Hello Couchbase!
+```
