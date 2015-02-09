@@ -14,6 +14,18 @@ The tooling is based on:
 * YEOMAN: The web's scaffolding tool for modern webapps
 * cean-cli: A node module which provides a simplified command line interface on top of YEOMAN (TODO!)
 
+# Requirements
+
+* Install the following on your development machine. For instance for Ubunut 14.04:
+```
+sudo apt-get install gcc
+sudo apt-get make
+sudo apt-get node
+sudo apt-get npm
+sudo apt-get nodejs-legacy
+sudo npm install -g yo
+```
+
 # How to use
 
 * Clone this repository
@@ -61,5 +73,11 @@ http://192.168.7.162:9000/
 ```
 * Click on the 'Add Test Document' button
 * Also inspect the log output of your application
-* If everything worked fine then you get a success message.
-* Reload the page and you should see the just inserted message 'Hello Couchbase!'
+* If everything worked fine then you get a success message:
+```
+Successfully added a document to your Couchbase bucket!
+```
+* Reload the page and you should see the just inserted message: 
+```
+Hello Couchbase!
+```
