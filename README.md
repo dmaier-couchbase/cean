@@ -38,5 +38,24 @@ mkdir myapp
 ```
 yo cean myapp
 ```
-* Answer the questions regarding 'Couchbase Host', 'Couchbase Bucket', 'Couchbase Password'!
+* Answer the questions regarding 'Couchbase Host', 'Couchbase Bucket', 'Couchbase Password'! For instance:
+```
+== This is the Couchbase CEAN generator ==
+appname = myapp
+[?] Your Couchbase Host: 192.168.7.160
+192.168.7.160
+[?] Your Couchbase Bucket: cean
+cean
+[?] Your Couchbase Bucket Password: test
+test
+...
+```
 * Wait until all dependencies are downloaded!
+* Run the exsample application
+```
+node app.js
+```
+* Open the example application in your browser, E.G:
+```
+http://192.168.7.162:9000/
+```
