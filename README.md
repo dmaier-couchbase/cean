@@ -9,5 +9,7 @@ The CEAN stack is based on the following components:
 * AngularJS: A client side JavaScript MVC web application framework
 * Node.js: A JavaScript oriented web service/application platform which is designed to build scalable network application
 
+The tooling is based on:
 
-
+* YEOMAN: The web's scaffolding tool for modern webapps
+* cean-cli: A node module which provides a simplified command line interface on top of YEOMAN
