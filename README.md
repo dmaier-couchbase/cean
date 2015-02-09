@@ -4,7 +4,7 @@ This source code repository contains useful stuff regarding the subject 'Scaffol
 
 The CEAN stack is based on the following components:
 
-* Couchbase Server: A highly scalable distributed KV-Store and Document Database System
+* Couchbase Server / Couchbase Node.js module: A highly scalable distributed KV-Store and Document Database System
 * Express: A web application framework for Node.js
 * AngularJS: A client side JavaScript MVC web application framework
 * Node.js: A JavaScript oriented web service/application platform which is designed to build scalable network application
