@@ -63,7 +63,7 @@ test
 ...
 ```
 * Wait until all dependencies are downloaded!
-* Run the exsample application
+* Run the example application
 ```
 node app.js
 ```
