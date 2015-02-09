@@ -1,0 +1,9 @@
+{
+  "name": "generator-cean",
+  "version": "0.1.0",
+  "description": "The CEAN stack generator",
+  "keywords": ["yeoman-generator", "angularjs", "CEAN"],
+  "dependencies": {
+    "yeoman-generator": "^0.17.3"
+  }
+}

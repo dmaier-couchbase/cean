@@ -1,0 +1,19 @@
+<div ng-include="'views/header.html'"/>
+
+<div class = "row marketing">
+
+    <div class = "well">
+        
+        <h3>Welcome!</h3>
+    
+        <p>
+            {{msg}}
+        </p>
+    </div>
+    
+    <form id="add" role="form">
+        <button id="buttonAdd" class="btn btn-default" ng-click="onAddClicked()">Add Test Document</button>
+    </form>
+</div>
+
+<div ng-include="'views/footer.html'"/>
