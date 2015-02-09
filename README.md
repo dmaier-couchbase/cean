@@ -12,4 +12,30 @@ The CEAN stack is based on the following components:
 The tooling is based on:
 
 * YEOMAN: The web's scaffolding tool for modern webapps
-* cean-cli: A node module which provides a simplified command line interface on top of YEOMAN
+* cean-cli: A node module which provides a simplified command line interface on top of YEOMAN (TODO!)
+
+# How to use
+
+* Clone this repository
+```
+git clone https://github.com/dmaier-couchbase/cean.git
+```
+* Change the directory
+```
+cd cean/src/yeoman-generators/generator-cean
+```
+* Link the Generator by resolving the deps
+```
+sudo npm link
+```
+* Create a new project directory 
+```
+cd --
+mkdir myapp
+```
+* Scaffold a new Couchbase application
+```
+yo cean myapp
+```
+* Answer the questions regarding 'Couchbase Host', 'Couchbase Bucket', 'Couchbase Password'!
+* Wait until all dependencies are downloaded!
