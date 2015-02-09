@@ -20,11 +20,13 @@ app.controller('MyCtrl', function($scope, MyService) {
        function(ctx) {
         
            var result = ctx.data;
-           var value = result.value; 
            
-           if (value.msg)
+           if (!result.error)
            {
-                $scope.msg = value.msg;   
+                var value = result.value; 
+           
+               //Set the model
+               if (value.msg) $scope.msg = value.msg;   
            }
        }
    );
