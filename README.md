@@ -81,3 +81,8 @@ Successfully added a document to your Couchbase bucket!
 ```
 Hello Couchbase!
 ```
+
+#Screen Shots
+# Screenshots
+![alt tag](https://raw.github.com/dmaier-couchbase/cean/master/assets/screen.png)
+
