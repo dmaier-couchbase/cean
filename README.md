@@ -88,5 +88,6 @@ Hello Couchbase!
 # TODO-s
 
 * Add sub-generators for controllers, ...
+* Follow the 'express' folder structure which is described here: http://expressjs.com/starter/generator.html
 * Add a Grunt build script which allows to run the client and server side code seperatly or together
 * Wrap the yo commands by providing a cean command line tool (E.G. 'cean init $appname' instead 'yo cean $appname')
