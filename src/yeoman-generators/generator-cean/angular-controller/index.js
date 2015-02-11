@@ -22,6 +22,7 @@ module.exports = gens.NamedBase.extend({
         //Print some info
         console.log("== CEAN - Angular Controller Generator  ==");
         console.log("appname = " + this.appname);
+        console.log("name = " + this.name);
     },
     
     askForFileName : function () {
@@ -31,7 +32,7 @@ module.exports = gens.NamedBase.extend({
                 type    : 'input',
                 name    : 'filename',
                 message : 'Controller File Name',
-                default : 'hello.js'
+                default : this._.camelize(this.name) + "js"
         }, function (answers) {
             this.log(answers.filename);
             this.filename = answers.filename;
@@ -44,12 +45,12 @@ module.exports = gens.NamedBase.extend({
         var done = this.async();
         this.prompt({
                 type    : 'input',
-                name    : 'controllername',
+                name    : 'name',
                 message : 'Controller Name',
-                default : 'HelloCtrl'
+                default : this.name
         }, function (answers) {
-            this.log(answers.controllername);
-            this.controllername = answers.controllername;
+            this.log(answers.name);
+            this.name = answers.name;
             done();
         }.bind(this));
     },
