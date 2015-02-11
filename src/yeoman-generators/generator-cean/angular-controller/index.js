@@ -58,6 +58,6 @@ module.exports = gens.NamedBase.extend({
     client : function () {
                   
         //Apply templates        
-        this.template('_controller.js', 'public/scripts/controllers/controller.js');
+        this.template('_controller.js', 'public/scripts/controllers/' + this.filename);
     }
 });
