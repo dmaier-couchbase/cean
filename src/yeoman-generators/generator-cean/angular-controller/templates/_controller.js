@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name <%= _.slugify(_.humanize(appname)) %>.controller: <%= name %>
+ * @name <%= _.slugify(_.humanize(appname)) %>.controller:<%= name %>
  * @description
  * # <%= name %>
  */

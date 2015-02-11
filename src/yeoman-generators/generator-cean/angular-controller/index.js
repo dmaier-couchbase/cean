@@ -2,6 +2,7 @@
 
 //Import the base generator module
 var path = require('path');
+var fs = require('fs');
 var gens = require('yeoman-generator');
 
 //Extend the base generator
@@ -55,9 +56,33 @@ module.exports = gens.NamedBase.extend({
         }.bind(this));
     },
     
-    client : function () {
+    createController : function () {
                   
         //Apply templates        
         this.template('_controller.js', 'public/scripts/controllers/' + this.filename);
+    },
+    
+    registerController : function() {
+     
+        //Controller needs to be added to the index.html file after <!-- cean: Controllers -->
+        var file = 'public/index.html';
+        
+        this._replace(file, '<!-- cean: Controllers -->' , 
+                            '<!-- cean: Controllers --> \r\n' +
+                            '<script src="scripts/controllers/' + this.filename + '"></script>
+    },
+            
+    _replace : function(fileName, match , replace) {
+        
+        fs.readFile(fileName, 'utf8', function (err,data) {
+
+            if (err) return console.log(err);
+        
+            var result = data.replace('/' + match + '/g', replace);
+
+            fs.writeFile(someFile, result, 'utf8', function (err) {
+                if (err) return console.log(err);
+            });
+        });
     }
 });

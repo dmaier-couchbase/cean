@@ -1,6 +1,6 @@
-var qaServices = angular.module('<%= _.slugify(_.humanize(appname)) %>');
+var services = angular.module('<%= _.slugify(_.humanize(appname)) %>');
 
-qaServices.factory('MyService', function($http) {
+services.factory('MyService', function($http) {
    
     var myService = new TMyService($http);
     
