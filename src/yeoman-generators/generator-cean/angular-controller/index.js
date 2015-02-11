@@ -32,7 +32,7 @@ module.exports = gens.NamedBase.extend({
                 type    : 'input',
                 name    : 'filename',
                 message : 'Controller File Name',
-                default : this._.slugify(_.humanize(this.name) + ".js")
+                default : this._.slugify(this._.humanize(this.name) + ".js")
         }, function (answers) {
             this.log(answers.filename);
             this.filename = answers.filename;
