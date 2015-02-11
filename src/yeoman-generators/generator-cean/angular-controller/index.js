@@ -64,12 +64,17 @@ module.exports = gens.NamedBase.extend({
     
     registerController : function() {
      
+        console.log("Adding controller to index.html ...");
+        
         //Controller needs to be added to the index.html file after <!-- cean: Controllers -->
         var file = 'public/index.html';
         
-        this._replace(file, '<!-- cean: Controllers -->' , 
+        /*
+        this._replace(file, this._escape('<!-- cean: Controllers -->'), 
                             '<!-- cean: Controllers --> \r\n' +
                             '<script src="scripts/controllers/' + this.filename + '"></script>');
+        */
+        this._replace("cean", "CEAN");
     },
             
     _replace : function(fileName, match , replace) {
@@ -84,5 +89,10 @@ module.exports = gens.NamedBase.extend({
                 if (err) return console.log(err);
             });
         });
+    },
+    
+    _escape : function(string){
+        
+        return string.replace(/([.*+?^${}()|\[\]\/\\])/g, "\\$1");
     }
 });
