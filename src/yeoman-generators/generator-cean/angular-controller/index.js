@@ -71,13 +71,9 @@ module.exports = gens.NamedBase.extend({
         //Controller needs to be added to the index.html file after <!-- cean: Controllers -->
         var file = this.project + "/public/index.html";
         
-        /*
-        this._replace(file, this._escape('<!-- cean: Controllers -->'), 
+        this._replace(file, '<!-- cean: Controllers -->', 
                             '<!-- cean: Controllers --> \r\n' +
                             '<script src="scripts/controllers/' + this.filename + '"></script>');
-        */
-        //TODO: Does not work, why?
-        this._replace(file, "cean", "CEAN");
     },
             
     _replace : function(fileName, match , repl) {
@@ -88,7 +84,7 @@ module.exports = gens.NamedBase.extend({
         
             console.log(data);
             
-            var regexp = new RegExp(match,"g")
+            var regexp = new RegExp(this._escape(match),"g")
             var result = data.replace(regexp, repl);
             
             console.log(result);
