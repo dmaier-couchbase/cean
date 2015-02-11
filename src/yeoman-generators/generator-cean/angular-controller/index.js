@@ -32,7 +32,7 @@ module.exports = gens.NamedBase.extend({
                 type    : 'input',
                 name    : 'filename',
                 message : 'Controller File Name',
-                default : this._.camelize(this.name) + "js"
+                default : this._.slugify(_.humanize(this.name) + ".js")
         }, function (answers) {
             this.log(answers.filename);
             this.filename = answers.filename;
@@ -47,7 +47,7 @@ module.exports = gens.NamedBase.extend({
                 type    : 'input',
                 name    : 'name',
                 message : 'Controller Name',
-                default : this.name
+                default : this._.camelize(this.name)
         }, function (answers) {
             this.log(answers.name);
             this.name = answers.name;
