@@ -72,7 +72,7 @@ module.exports = gens.NamedBase.extend({
         var file = this.project + "/public/index.html";
         
         this._replace(file, '<!-- cean: Controllers -->', 
-                            '<!-- cean: Controllers --> \r\n' +
+                            '<!-- cean: Controllers --> \n' +
                             '<script src="scripts/controllers/' + this.filename + '"></script>');
     },
             
@@ -83,14 +83,10 @@ module.exports = gens.NamedBase.extend({
         fs.readFile(fileName, 'utf8', function (err,data) {
 
             if (err) return console.log(err);
-        
-            console.log(data);
-            
+                    
             var regexp = new RegExp(me._escape(match),"g")
             var result = data.replace(regexp, repl);
             
-            console.log(result);
-
             fs.writeFile(fileName, result, 'utf8', function (err) {
                 if (err) return console.log(err);
             });
