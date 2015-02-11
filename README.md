@@ -63,7 +63,7 @@ test
 ...
 ```
 * Wait until all dependencies are downloaded!
-* Run the exsample application
+* Run the example application
 ```
 node app.js
 ```
@@ -81,3 +81,13 @@ Successfully added a document to your Couchbase bucket!
 ```
 Hello Couchbase!
 ```
+
+# Screenshots
+![alt tag](https://raw.github.com/dmaier-couchbase/cean/master/assets/screen.png)
+
+# TODO-s
+
+* Add sub-generators for controllers, ...
+* Follow the 'express' folder structure which is described here: http://expressjs.com/starter/generator.html
+* Add a Grunt build script which allows to run the client and server side code seperatly or together
+* Wrap the yo commands by providing a cean command line tool (E.G. 'cean init $appname' instead 'yo cean $appname')
