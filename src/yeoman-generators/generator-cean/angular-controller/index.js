@@ -80,7 +80,7 @@ module.exports = gens.NamedBase.extend({
         
             var result = data.replace('/' + match + '/g', replace);
 
-            fs.writeFile(someFile, result, 'utf8', function (err) {
+            fs.writeFile(fileName, result, 'utf8', function (err) {
                 if (err) return console.log(err);
             });
         });
