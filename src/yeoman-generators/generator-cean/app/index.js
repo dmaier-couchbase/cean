@@ -1,3 +1,5 @@
+'use strict';
+
 //Import the base generator module
 var path = require('path');
 var gens = require('yeoman-generator');
@@ -86,33 +88,33 @@ module.exports = gens.Base.extend({
     clientapp : function () {
                      
         //Create the project directory structure
-        this.mkdir('app');
-        this.mkdir('app/images');
-        this.mkdir('app/scripts');
-        this.mkdir('app/scripts/controllers');
-        this.mkdir('app/scripts/services');
-        this.mkdir('app/styles');
-        this.mkdir('app/views');
+        this.mkdir('public');
+        this.mkdir('public/images');
+        this.mkdir('public/scripts');
+        this.mkdir('public/scripts/controllers');
+        this.mkdir('public/scripts/services');
+        this.mkdir('public/styles');
+        this.mkdir('public/views');
         
         //Copy files
-        this.copy('client/_404.html', 'app/404.html');
-        this.copy('client/_favicon.ico', 'app/favicon.ico');
-        this.copy('client/_robots.txt', 'app/robots.txt');
-        this.copy('client/images/_cb.png', 'app/images/cb.png');
-        this.copy('client/images/_yeoman.png', 'app/images/yeoman.png');
-        this.copy('client/styles/_main.css', 'app/styles/main.css');
+        this.copy('client/_404.html', 'public/404.html');
+        this.copy('client/_favicon.ico', 'public/favicon.ico');
+        this.copy('client/_robots.txt', 'public/robots.txt');
+        this.copy('client/images/_cb.png', 'public/images/cb.png');
+        this.copy('client/images/_yeoman.png', 'public/images/yeoman.png');
+        this.copy('client/styles/_main.css', 'public/styles/main.css');
             
         
         //Apply templates        
-        this.template('client/_index.html', 'app/index.html');
-        this.template('client/scripts/_app.js', 'app/scripts/app.js');
-        this.template('client/scripts/controllers/_main.js', 'app/scripts/controllers/main.js');
-        this.template('client/scripts/controllers/_mycontroller.js', 'app/scripts/controllers/mycontroller.js');
-        this.template('client/scripts/services/_main.js', 'app/scripts/services/main.js');
-        this.template('client/scripts/services/_myservice.js', 'app/scripts/services/myservice.js');
-        this.template('client/views/_footer.html', 'app/views/footer.html');
-        this.template('client/views/_header.html', 'app/views/header.html');
-        this.template('client/views/_main.html', 'app/views/main.html');    
+        this.template('client/_index.html', 'public/index.html');
+        this.template('client/scripts/_app.js', 'public/scripts/app.js');
+        this.template('client/scripts/controllers/_main.js', 'public/scripts/controllers/main.js');
+        this.template('client/scripts/controllers/_mycontroller.js', 'public/scripts/controllers/mycontroller.js');
+        this.template('client/scripts/services/_main.js', 'public/scripts/services/main.js');
+        this.template('client/scripts/services/_myservice.js', 'public/scripts/services/myservice.js');
+        this.template('client/views/_footer.html', 'public/views/footer.html');
+        this.template('client/views/_header.html', 'public/views/header.html');
+        this.template('client/views/_main.html', 'public/views/main.html');    
     },
 
     installDeps : function() {
