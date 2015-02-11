@@ -74,7 +74,7 @@ module.exports = gens.NamedBase.extend({
                             '<!-- cean: Controllers --> \r\n' +
                             '<script src="scripts/controllers/' + this.filename + '"></script>');
         */
-        this._replace("cean", "CEAN");
+        this._replace(file, "cean", "CEAN");
     },
             
     _replace : function(fileName, match , replace) {
