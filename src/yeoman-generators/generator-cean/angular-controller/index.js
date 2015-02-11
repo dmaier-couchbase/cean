@@ -88,7 +88,7 @@ module.exports = gens.NamedBase.extend({
         
             console.log(data);
             
-            var result = data.replace('s#' + match + '#g', repl);
+            var result = data.replace(/match/g, repl);
             
             console.log(result);
 
