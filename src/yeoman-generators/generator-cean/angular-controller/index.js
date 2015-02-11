@@ -15,13 +15,15 @@ module.exports = gens.NamedBase.extend({
                 
         //Arguments
         this.argument('appname', { type: String, required: true });
-        this.appname = this._.camelize(this.appname);            
+        this.appname = this._.camelize(this.appname);
+        this.project = this.destinationRoot();
     },
     
     info : function () {        
         
         //Print some info
         console.log("== CEAN - Angular Controller Generator  ==");
+        console.log("project = " + this.project);
         console.log("appname = " + this.appname);
         console.log("name = " + this.name);
     },
