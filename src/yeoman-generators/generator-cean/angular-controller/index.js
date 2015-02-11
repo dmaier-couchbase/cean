@@ -67,13 +67,14 @@ module.exports = gens.NamedBase.extend({
         console.log("Adding controller to index.html ...");
         
         //Controller needs to be added to the index.html file after <!-- cean: Controllers -->
-        var file = 'public/index.html';
+        var file = this.destinationPath('public/index.html');
         
         /*
         this._replace(file, this._escape('<!-- cean: Controllers -->'), 
                             '<!-- cean: Controllers --> \r\n' +
                             '<script src="scripts/controllers/' + this.filename + '"></script>');
         */
+        //TODO: Does not work, why?
         this._replace(file, "cean", "CEAN");
     },
             
