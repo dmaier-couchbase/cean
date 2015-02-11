@@ -69,7 +69,7 @@ module.exports = gens.NamedBase.extend({
         
         this._replace(file, '<!-- cean: Controllers -->' , 
                             '<!-- cean: Controllers --> \r\n' +
-                            '<script src="scripts/controllers/' + this.filename + '"></script>
+                            '<script src="scripts/controllers/' + this.filename + '"></script>";
     },
             
     _replace : function(fileName, match , replace) {
