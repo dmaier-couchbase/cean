@@ -80,7 +80,7 @@ module.exports = gens.NamedBase.extend({
         this._replace(file, "cean", "CEAN");
     },
             
-    _replace : function(fileName, match , replace) {
+    _replace : function(fileName, match , repl) {
         
         fs.readFile(fileName, 'utf8', function (err,data) {
 
@@ -88,7 +88,7 @@ module.exports = gens.NamedBase.extend({
         
             console.log(data);
             
-            var result = data.replace('/' + match + '/g', replace);
+            var result = data.replace('s#' + match + '#g', repl);
             
             console.log(result);
 
