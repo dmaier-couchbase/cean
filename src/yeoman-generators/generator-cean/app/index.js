@@ -130,6 +130,9 @@ module.exports = gens.Base.extend({
 
         // Import package.json metadata
         this.gruntfile.insertConfig("pkg","grunt.file.readJSON('package.json')");
+
+        // TODO: Add Express section to the gruntfile.
+
         // Set up file watch (for live reload)
         this.gruntfile.insertConfig("watch",
               "{ livereload: { \
