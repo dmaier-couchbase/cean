@@ -20,9 +20,9 @@ The tooling is based on:
 ```
 sudo apt-get install gcc
 sudo apt-get make
-sudo apt-get node
-sudo apt-get npm
+sudo apt-get nodejs
 sudo apt-get nodejs-legacy
+sudo apt-get npm
 sudo npm install -g yo
 ```
 
@@ -87,7 +87,4 @@ Hello Couchbase!
 
 # TODO-s
 
-* Add sub-generators for controllers, ...
-* Follow the 'express' folder structure which is described here: http://expressjs.com/starter/generator.html
-* Add a Grunt build script which allows to run the client and server side code seperatly or together
-* Wrap the yo commands by providing a cean command line tool (E.G. 'cean init $appname' instead 'yo cean $appname')
+Please see 'Issues'
