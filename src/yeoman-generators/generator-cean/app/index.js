@@ -117,6 +117,27 @@ module.exports = gens.Base.extend({
         this.template('client/views/_main.html', 'public/views/main.html');    
     },
 
+    writing: function() {
+
+        // Import package.json metadata
+        this.gruntfile.insertConfig("pkg","grunt.file.readJSON('package.json')");
+        // Set up file watch (for live reload)
+        this.gruntfile.insertConfig("watch",
+              "{ livereload: { \
+                        files: [ \
+                            '/public/*.html', \
+                            '/public/views/*.html', \
+                            '/public/styles/*.css', \
+                            '/public/scripts/*.js', \
+                            '/public/images/*.{png,jpg,jpeg}' \
+                        ], \
+                        tasks: ['livereload'] \
+                    } \
+              }"
+        );
+
+    },
+
     installDeps : function() {
         
         this.installDependencies();
