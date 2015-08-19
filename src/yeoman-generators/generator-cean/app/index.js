@@ -88,7 +88,7 @@ module.exports = gens.Base.extend({
 	//Copy files 		
         this.copy('server/_app.js', 'app.js');
 	this.copy('server/_helper.js', 'helper.js');
-	this.copy('server/_route_Demo.js', 'routes/Demo.js');
+	this.copy('server/_route_demo.js', 'routes/demo.js');
 	
 	//Apply templates
 	this.template('server/_cb.js', 'cb.js');
