@@ -87,4 +87,4 @@ Hello Couchbase!
 
 # TODO-s
 
-Please see 'Issues'
+[https://github.com/dmaier-couchbase/cean/issues]
