@@ -18,7 +18,7 @@ var con = cb.connect();
 var SERVICE_URL = '/service/';
 
 //Routes
-var demos = require('./routes/Demo.js');
+var demos = require('./routes/demo.js');
 app.use(SERVICE_URL, demos);
 
 
