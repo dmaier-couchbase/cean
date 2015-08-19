@@ -128,26 +128,83 @@ module.exports = gens.Base.extend({
 
     writing: function() {
 
+        // Configuration JSON for express in Gruntfile
+        var expressConfig = {
+            options: {
+                // Override defaults here
+            },
+            web: {
+                options: {
+                    script: 'app.js',
+                }
+            },
+        };
+
+        // Configuration JSON for frontend in Gruntfile
+        var frontendConfig = {
+            options: {
+                livereload: true
+            },
+            files: [
+                // triggering livereload when the .css file is updated
+                // (compared to triggering when sass completes)
+                // allows livereload to not do a full page refresh
+                '/public/*.html',
+                '/public/views/*.html',
+                '/public/styles/*.css',
+                '/public/scripts/*.js',
+                '/public/images/*.{png,jpg,jpeg}'
+            ]
+        };
+
+        // Configuration JSON for backend web server in Gruntfile
+        var webConfig = {
+            files: [
+                'routes/*.js',
+            ],
+            tasks: [
+                'express:web'
+            ],
+            options: {
+                nospawn: true, //Without this option specified express won't be reloaded
+                atBegin: true,
+            }
+        };
+
+        // Parallel Options for launching
+        var parallelConfig = {
+            web: {
+                options: {
+                    stream: true
+                },
+                tasks: [{
+                    grunt: true,
+                    args: ['watch:frontend']
+                }, {
+                    grunt: true,
+                    args: ['watch:web']
+                }]
+            }
+        };
+
+        /*
+        * Create Gruntfile using parameters above
+        */
+
         // Import package.json metadata
         this.gruntfile.insertConfig("pkg","grunt.file.readJSON('package.json')");
 
-        // TODO: Add Express section to the gruntfile.
+        // Add Express section to the gruntfile.
+        this.gruntfile.insertConfig("express", JSON.stringify(expressConfig));
 
         // Set up file watch (for live reload)
         this.gruntfile.insertConfig("watch",
-              "{ livereload: { \
-                        files: [ \
-                            '/public/*.html', \
-                            '/public/views/*.html', \
-                            '/public/styles/*.css', \
-                            '/public/scripts/*.js', \
-                            '/public/images/*.{png,jpg,jpeg}' \
-                        ], \
-                        tasks: ['livereload'] \
-                    } \
-              }"
+              "{ frontend: " + JSON.stringify(frontendConfig) + ", \
+                 web: " + JSON.stringify(webConfig) + "}"
         );
 
+        // Set up parallel launch options
+        this.gruntfile.insertConfig("parallel", JSON.stringify(parallelConfig))
     },
 
     installDeps : function() {
