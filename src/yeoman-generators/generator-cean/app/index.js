@@ -204,7 +204,18 @@ module.exports = gens.Base.extend({
         );
 
         // Set up parallel launch options
-        this.gruntfile.insertConfig("parallel", JSON.stringify(parallelConfig))
+        this.gruntfile.insertConfig("parallel", JSON.stringify(parallelConfig));
+
+        //Register tasks to allow launching
+        this.gruntfile.registerTask("web", [
+            "parallel:web"
+        ]);
+
+        this.gruntfile.registerTask("default", ["web"]);
+
+        // TODO: Fix this so it actually loads tasks
+        //this.gruntfile.prependJavaScript("require('load-grunt-tasks')(grunt)");
+
     },
 
     installDeps : function() {
