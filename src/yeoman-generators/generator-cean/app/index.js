@@ -82,7 +82,16 @@ module.exports = gens.Base.extend({
     
     serverapp : function () {
       
-        this.template('server/_app.js', 'app.js');
+        //Create a routes folder
+	this.mkdir('routes');
+
+	//Copy files 		
+        this.copy('server/_app.js', 'app.js');
+	this.copy('server/_helper.js', 'helper.js');
+	this.copy('server/_route_Demo.js', 'routes/Demo.js');
+	
+	//Apply templates
+	this.template('server/_cb.js', 'cb.js');
     },
     
     clientapp : function () {
