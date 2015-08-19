@@ -4,6 +4,6 @@
   "description": "The CEAN stack generator",
   "keywords": ["yeoman-generator", "angularjs", "CEAN"],
   "dependencies": {
-    "yeoman-generator": "^0.17.3"
+    "yeoman-generator": "^0.18.10"
   }
 }

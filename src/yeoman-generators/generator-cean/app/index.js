@@ -78,6 +78,7 @@ module.exports = gens.Base.extend({
       
         this.template('_bower.json', 'bower.json');
         this.template('_package.json', 'package.json');
+        this.template('_Gruntfile.js', 'Gruntfile.js');
     },
     
     serverapp : function () {
@@ -212,9 +213,6 @@ module.exports = gens.Base.extend({
         ]);
 
         this.gruntfile.registerTask("default", ["web"]);
-
-        // TODO: Fix this so it actually loads tasks
-        //this.gruntfile.prependJavaScript("require('load-grunt-tasks')(grunt)");
 
     },
 
