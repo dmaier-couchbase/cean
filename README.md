@@ -12,6 +12,7 @@ The CEAN stack is based on the following components:
 The tooling is based on:
 
 * YEOMAN: The web's scaffolding tool for modern webapps
+* Grunt: The JavaScript Task Runner
 * cean-cli: A node module which provides a simplified command line interface on top of YEOMAN (TODO!)
 
 # Requirements
@@ -63,9 +64,10 @@ test
 ...
 ```
 * Wait until all dependencies are downloaded!
-* Run the example application
+
+* Use Grunt to host the application and enjoy automagically LiveReloaded server and client application when you make changes!
 ```
-node app.js
+grunt
 ```
 * Open the example application in your browser, E.G:
 ```
