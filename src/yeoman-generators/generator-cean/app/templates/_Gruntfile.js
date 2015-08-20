@@ -5,11 +5,11 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         express: {
             'options': {},
-            'web': { 'options': { 'script': 'app.js' } }
+            'web': {'options': {'script': 'app.js'}}
         },
         watch: {
             frontend: {
-                'options': { 'livereload': true },
+                'options': {'livereload': true},
                 'files': [
                     '/public/*.html',
                     '/public/views/*.html',
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         },
         parallel: {
             'web': {
-                'options': { 'stream': true },
+                'options': {'stream': true},
                 'tasks': [
                     {
                         'grunt': true,
@@ -43,4 +43,6 @@ module.exports = function (grunt) {
             }
         }
     });
+    grunt.registerTask("web", ["parallel:web"]);
+    grunt.registerTask("default", ["web"]);
 }

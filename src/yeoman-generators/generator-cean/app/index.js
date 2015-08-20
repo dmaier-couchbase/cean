@@ -128,10 +128,7 @@ module.exports = gens.Base.extend({
     },
 
     writing: function() {
-        //Register tasks to allow launching
-        this.gruntfile.registerTask("web", ["parallel:web"]);
-        this.gruntfile.registerTask("default", ["web"]);
-
+        //Gruntfile.js cleverness can go here.
     },
 
     installDeps : function() {
