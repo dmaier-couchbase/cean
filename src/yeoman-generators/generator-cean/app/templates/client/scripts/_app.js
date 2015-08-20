@@ -16,7 +16,9 @@ var app = angular.module('<%= _.slugify(_.humanize(appname)) %>', [
 
 app.config(function($routeProvider) {
    
+    
     $routeProvider
+    //-- cean: Routes
     .when('/', {
        templateUrl : 'views/main.html',
        controller : 'MyCtrl'

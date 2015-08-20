@@ -17,7 +17,7 @@ var con = cb.connect();
 //The service's base URL
 var SERVICE_URL = '/service/';
 
-//Routes
+//-- cean: Routers
 var demos = require('./routes/demo.js');
 app.use(SERVICE_URL, demos);
 

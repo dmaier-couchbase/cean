@@ -1,8 +1,8 @@
 'use strict';
 
 //Import the base generator module
-var helper = require('../app/helper.js');
 var gens = require('yeoman-generator');
+var helper = require('../app/helper.js');
 
 //Extend the base generator
 module.exports = gens.NamedBase.extend({
@@ -13,8 +13,6 @@ module.exports = gens.NamedBase.extend({
         gens.NamedBase.apply(this, arguments);
                 
         //Arguments
-        this.argument('appname', { type: String, required: true });
-        this.appname = this._.camelize(this.appname);
         this.project = this.destinationRoot();
     },
     
@@ -23,7 +21,6 @@ module.exports = gens.NamedBase.extend({
         //Print some info
         console.log("== CEAN - Angular Controller Generator  ==");
         console.log("project = " + this.project);
-        console.log("appname = " + this.appname);
         console.log("name = " + this.name);
     },
     
@@ -33,8 +30,8 @@ module.exports = gens.NamedBase.extend({
         this.prompt({
                 type    : 'input',
                 name    : 'filename',
-                message : 'Controller File Name',
-                default : this._.slugify(this._.humanize(this.name)) + ".js"
+                message : 'View File Name',
+                default : this._.slugify(this._.humanize(this.name)) + ".html"
         }, function (answers) {
             this.log(answers.filename);
             this.filename = answers.filename;
@@ -48,7 +45,7 @@ module.exports = gens.NamedBase.extend({
         this.prompt({
                 type    : 'input',
                 name    : 'name',
-                message : 'Controller Name',
+                message : 'View Name',
                 default : this._.camelize(this.name)
         }, function (answers) {
             this.log(answers.name);
@@ -57,21 +54,36 @@ module.exports = gens.NamedBase.extend({
         }.bind(this));
     },
     
-    createController : function () {
-                  
-        //Apply templates        
-        this.template('_controller.js', 'public/scripts/controllers/' + this.filename);
+    askForSubtitle : function () {
+        
+        var done = this.async();
+        this.prompt({
+                type    : 'input',
+                name    : 'subtitle',
+                message : 'Sub title',
+                default : 'Hello Couchbase!'
+        }, function (answers) {
+            this.log(answers.subtitle);
+            this.subtitle = answers.subtitle;
+            done();
+        }.bind(this));
     },
     
-    registerController : function() {
+    createView : function () {
+                  
+        //Apply templates        
+        this.template('_view.html', 'public/views/' + this.filename);
+    },
+    
+    registerView : function() {
      
-        console.log("Adding controller to index.html ...");
+        console.log("Adding the view to header.html ...");
         
-        //Controller needs to be added to the index.html file after <!-- cean: Controllers -->
-        var file = this.project + "/public/index.html";
+        //The view needs to be added to the menu and so the header.html file
+        var file = this.project + "/public/views/header.html";
         
-        helper.replace(file, '<!-- cean: Controllers -->', 
-                            '<!-- cean: Controllers --> \n' +
-                            '<script src="scripts/controllers/' + this.filename + '"></script>');
+        helper.replace(file, '<!-- cean: Views -->', 
+                            '<!-- cean: Views --> \n' +
+                            '<li> <a ng-href="#/' + this.filename + '">' + this.name + '</a> </li>');
     }
 });
