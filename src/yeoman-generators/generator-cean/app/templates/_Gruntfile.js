@@ -19,7 +19,9 @@ module.exports = function (grunt) {
                 ]
             },
             web: {
-                files: ['routes/*.js'],
+                files: [
+                    '*.js',
+                    'routes/*.js'],
                 tasks: ['express:web'],
                 options: {
                     nospawn: true,
