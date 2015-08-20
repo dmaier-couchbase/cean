@@ -104,6 +104,8 @@ yo cean:angular-view test
 yo cean:angular-route test.html TestCtrl
 ```
 
+Important: Files have CEAN markers in them in order to make this work. Markers are realized as source code comments. So you should not remove something like '--cean: ${Marker}' in your source code. This would basically break some sub-generator funtionality.
+
 
 # Screenshots
 ![alt tag](https://raw.github.com/dmaier-couchbase/cean/master/assets/screen.png)
