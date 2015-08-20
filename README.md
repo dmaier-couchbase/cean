@@ -65,10 +65,6 @@ test
 ```
 * Wait until all dependencies are downloaded!
 
-* Use Grunt to host the application and enjoy automagically LiveReloaded server and client application when you make changes!
-```
-grunt
-```
 * Open the example application in your browser, E.G:
 ```
 http://192.168.7.162:9000/
@@ -83,6 +79,31 @@ Successfully added a document to your Couchbase bucket!
 ```
 Hello Couchbase!
 ```
+
+# Grunt
+
+Use Grunt to host the application and enjoy automagically LiveReloaded server and client application when you make changes!
+
+```
+grunt
+```
+
+# Sub-Generators
+
+The following sub-generators are currently available
+
+* angular-controller: Adds an Angular controller to your project
+* angular-view: Adds an angular view to your project
+* angular-route: Adds a route by glueing the controller and the view together
+
+Here an example which adds a controller which is named 'TestCtrl' to the application called 'myapp'. In the next step a new view with the name 'test' is created. Afterwards a route is added in order to make sure that the test controller is used together with the test view.
+
+```
+yo cean:angular-controller TestCtrl myapp
+yo cean:angular-view test
+yo cean:angular-route test.html TestCtrl
+```
+
 
 # Screenshots
 ![alt tag](https://raw.github.com/dmaier-couchbase/cean/master/assets/screen.png)
