@@ -19,7 +19,7 @@ module.exports = gens.NamedBase.extend({
     info : function () {        
         
         //Print some info
-        console.log("== CEAN - Angular Controller Generator  ==");
+        console.log("== CEAN - Angular View Generator  ==");
         console.log("project = " + this.project);
         console.log("name = " + this.name);
     },
