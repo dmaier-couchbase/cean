@@ -47,6 +47,7 @@ sudo npm link
 ```
 cd --
 mkdir myapp
+cd myapp
 ```
 * Scaffold a new Couchbase application
 ```
@@ -65,7 +66,10 @@ test
 ...
 ```
 * Wait until all dependencies are downloaded!
-
+* Start the application
+```
+grunt
+```
 * Open the example application in your browser, E.G:
 ```
 http://192.168.7.162:9000/
@@ -83,10 +87,16 @@ Hello Couchbase!
 
 # Grunt
 
-Use Grunt to host the application and enjoy automagically LiveReloaded server and client application when you make changes!
+Grunt is used to host the application and enjoy automagically LiveReloaded server and client application when you make changes!
 
 ```
 grunt
+```
+
+If you don't want to use the Grunt script then the application can be also started via:
+
+```
+node app.js
 ```
 
 # Sub-Generators
@@ -96,6 +106,8 @@ The following sub-generators are currently available
 * angular-controller: Adds an Angular controller to your project
 * angular-view: Adds an angular view to your project
 * angular-route: Adds a route by glueing the controller and the view together
+* angular-service: Adds a service wrapper, which means a client side REST client for an existing Express router
+* express-route: Adds an express router. This is used for implementing server side REST services those are bound to specific paths.
 
 Here an example which adds a controller which is named 'TestCtrl' to the application called 'myapp'. In the next step a new view with the name 'test' is created. Afterwards a route is added in order to make sure that the test controller is used together with the test view.
 
