@@ -66,7 +66,7 @@ module.exports = gens.NamedBase.extend({
      
         console.log("Adding the route to app.js ...");
         
-        //The view needs to be added to the menu and so the header.html file
+        //Register the router by adding it to the server side application entry point 'app.js'
         var file = this.project + "/app.js";
                 
         helper.replace(file, '//-- cean: Routers', 
