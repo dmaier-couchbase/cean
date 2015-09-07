@@ -17,7 +17,7 @@ The tooling is based on:
 
 # Requirements
 
-* Install the following on your development machine. For instance for Ubunut 14.04:
+* Install the following on your development machine. For instance for Ubuntu 14.04:
 ```
 sudo apt-get install gcc
 sudo apt-get make
@@ -25,9 +25,20 @@ sudo apt-get nodejs
 sudo apt-get nodejs-legacy
 sudo apt-get npm
 sudo npm install -g yo
-sudo npm install -g bower
 sudo npm install -g grunt-cli
+sudo npm install -g bower
 ```
+
+* On Mac OSX:
+First, install homebrew: http://brew.sh
+Then, install node.js etc: https://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
+Then:
+```
+sudo npm install -g yo
+sudo npm install -g grunt-cli
+sudo npm install -g bower
+```
+
 
 # How to use
 
