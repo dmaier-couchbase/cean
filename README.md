@@ -30,7 +30,8 @@ sudo npm install -g bower
 ```
 
 * On Mac OSX:
-First, install homebrew: http://brew.sh
+First, install homebrew: http://brew.sh.
+
 Then, install node.js etc: https://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
 Then:
 ```
