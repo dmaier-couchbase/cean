@@ -25,6 +25,7 @@ sudo apt-get nodejs
 sudo apt-get nodejs-legacy
 sudo apt-get npm
 sudo npm install -g yo
+sudo npm install -g bower
 sudo npm install -g grunt-cli
 ```
 
