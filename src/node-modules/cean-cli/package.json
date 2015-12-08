@@ -1,0 +1,30 @@
+{
+  "name": "cean-cli",
+  "version": "0.0.1",
+  "description": "A command line interface for CEAN",
+  "main": "cean-cli",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaier-couchbase/cean.git"
+  },
+  "keywords": [
+    "cli", "CEAN"
+  ],
+  "author": "david.maier@couchbase.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dmaier-couchbase/cean/issues"
+  },
+  "homepage": "https://github.com/dmaier-couchbase/cean#readme",
+  "dependencies": {
+       "generator-cean" : "http://github.com/dmaier-couchbase/cean/raw/master/releases/generator-cean-0.1.0.tar.gz",
+       "yeoman-generator": "^0.18.10",
+       "yo": "^1.4.7",
+       "bower" : "^1.4.1",
+       "grunt-cli" : "^0.1.13",
+       "grunt" : "^0.4.5"
+  }
+}

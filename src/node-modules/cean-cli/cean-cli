@@ -1,0 +1,72 @@
+#!/usr/bin/env node
+var sys = require('sys')
+var spawn = require('child_process').spawn;
+
+//Commands
+var PATH  = __dirname + "/node_modules/.bin"
+var COMMANDS  = {  "start" : PATH + "/grunt", "create" : PATH + "/yo cean", "add" : PATH + "/yo cean",  "install" : "npm install" };
+
+/**
+ * Usage details
+ */
+function usage() {
+
+	console.log("Use: cean-cli {install|run|create} {args}");
+}
+
+/**
+ * Entry point of the CLI
+ */
+function main() {
+
+   //console.log("Execution envirnment is " + PATH + " .");
+   var args = process.argv;
+   //console.log( "Args are: " + args);
+
+   if (args.length >= 3) {
+
+	cmd = args[2];
+
+	if ( cmd !== "--help" ) {
+
+		mcmd = COMMANDS[cmd];
+		
+		if (typeof mcmd !== "undefined")
+		{
+	
+			cargs = args.slice(3).join(' ');
+
+			//console.log("args = " + cargs); 			
+
+			strcmd = mcmd;
+
+			//Pass the arguments
+			if ( cargs !== "" ) { 
+
+				if (cmd == "add") {
+					
+					strcmd = strcmd + ":" + cargs;
+				}
+				else {
+					strcmd = strcmd + " " + cargs;
+				}
+			}
+		
+			//console.log("cmd = " + strcmd);			
+
+			spawn('sh', ['-c', strcmd], { stdio: 'inherit' });
+		}
+		else {
+			console.error("This command is not supported.");
+			usage();
+		}
+
+	} else {
+
+		usage();
+
+	}
+   }
+}
+
+main();
