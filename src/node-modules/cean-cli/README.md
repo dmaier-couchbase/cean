@@ -9,6 +9,16 @@ A Linux/Unix/MacOS environment with Node.js and NPM has to be installed.
 
 ## Installation
 
+### From a release
+
+```
+npm install https://github.com/dmaier-couchbase/cean/blob/master/releases/cean-cli-0.0.1.tar.gz?raw=true
+```
+
+This installs 'cean-cli' to '$HOME/node_modules/cean-cli'. You should add this directory to your execution $PATH.
+
+### Via the source code
+
 Check out the code:
 
 ```
@@ -28,7 +38,7 @@ Run the installation script:
 ./cean-cli install
 ```
 
-Add it to your PATH!
+Add it to your execution $PATH!
 
 
 ## How to use
