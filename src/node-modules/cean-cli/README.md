@@ -4,7 +4,7 @@ The idea is to provide a simple command line interface for application scaffoldi
 
 ## Reqirements
 
-A Linux/Unix/MacOS environment with Node.js and NPM has to be installed.
+A Linux/Unix/MacOS environment with Node.js,NPM, make and gcc has to be installed, e.g.:
 
 ```
 sudo apt-get install gcc
