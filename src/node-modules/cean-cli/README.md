@@ -48,7 +48,7 @@ Run the installation script:
 
 ## How to use
 
-The Cean CLI is bypassing commands. The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
+The Cean CLI is bypassing specific commands. The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
 
 The following examples assume that you have added the 'cean-cli' folder to your execution PATH
 
