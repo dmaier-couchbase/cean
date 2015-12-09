@@ -56,6 +56,7 @@ The Cean CLI is bypassing commands. The command 'start' is referring to 'grunt'.
 The following examples assume that you have added the 'cean-cli' folder to your execution PATH
 
 ```
+#Add to the end of your $HOME/.profile
 export PATH=$HOME/node_modules/cean-cli:$PATH
 ```
 
