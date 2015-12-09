@@ -51,15 +51,27 @@ Add it to your execution $PATH!
 
 ## How to use
 
-The Cean CLI is bypassing commands to Yeoman commands. 
+The Cean CLI is bypassing commands. The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
+
+The following examples assume that you have added the 'cean-cli' folder to your execution PATH
+
+```
+export PATH=$HOME/node_modules/cean-cli:$PATH
+```
+
+and that you are in an application directory of your choice:
+
+```
+cd $APP_DIR
+```
+
 
 ### Create a new application
 
 The following command can be used to create a new application:
 
 ```
-cd $APP_DIR
-./cean-cli create myapp 
+cean-cli create myapp 
 ```
 
 ### Sub-Generators
@@ -67,15 +79,13 @@ cd $APP_DIR
 The following shows how to use sub-generators:
 
 ```
-cd $APP_DIR
-./cean-cli add angular-controller TestCtrl myapp
-./cean-cli add angular-view test
-./cean-cli add angular-route test.html TestCtrl
+cean-cli add angular-controller TestCtrl myapp
+cean-cli add angular-view test
+cean-cli add angular-route test.html TestCtrl
 ```
 
 ### Start the application
 
 ```
-cd $APP_DIR
-./cean-cli start
+cean-cli start
 ```
