@@ -23,7 +23,7 @@ sudo apt-get npm
 npm install cean-cli
 ```
 
-This installs 'cean-cli' to '$HOME/node_modules/cean-cli'. You should add this directory to your execution $PATH.
+This installs 'cean-cli' to the folder '$HOME/node_modules/cean-cli'.
 
 ### Via the source code
 
@@ -45,9 +45,6 @@ Run the installation script:
 ```
 ./cean-cli install
 ```
-
-Add it to your execution $PATH!
-
 
 ## How to use
 
