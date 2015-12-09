@@ -19,7 +19,7 @@ sudo apt-get npm
 ### From a release
 
 ```
-npm install https://github.com/dmaier-couchbase/cean/blob/master/releases/cean-cli-0.0.1.tar.gz?raw=true
+npm install http://github.com/dmaier-couchbase/cean/blob/master/releases/cean-cli-0.0.1.tar.gz?raw=true
 ```
 
 This installs 'cean-cli' to '$HOME/node_modules/cean-cli'. You should add this directory to your execution $PATH.
