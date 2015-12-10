@@ -1,4 +1,4 @@
-# Generator CEAN
+# CEAN Yeoman Generator
 
 The tooling is based on Yeoman ( http://yeoman.io ):
 
