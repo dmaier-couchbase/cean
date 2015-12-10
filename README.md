@@ -13,7 +13,7 @@ The CEAN stack is based on the following components:
 
 There are two ways to use it.
 
-* Via the CEAN Command Line Interface: [cean-cli](src/node-modules/cean-cli/README.md) 
+* Via the command line interface: [cean-cli](src/node-modules/cean-cli/README.md) 
 * Via the Yeoman generator directly: [generator-cean](src/yeoman-generators/generator-cean/README.md) 
 
 # Screenshots
