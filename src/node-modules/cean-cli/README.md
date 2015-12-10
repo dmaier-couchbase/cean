@@ -1,6 +1,6 @@
 # A Command Line Interface for CEAN
 
-The idea is to provide a simple command line interface for application scaffolding. One of the advantages of using the CLI is that all the dependencie are installed locally with the CLI tool instead installing them globally to your Node.js installation.
+This provides you a simple command line interface for application scaffolding. One of the advantages of using the CLI is that all the dependencie are installed locally with the CLI tool instead installing them globally to your Node.js installation.
 
 ## Reqirements
 
@@ -48,7 +48,9 @@ Run the installation script:
 
 ## How to use
 
-The Cean CLI is bypassing specific commands. The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
+The Cean CLI is bypassing specific commands. More details can be found here  [generator-cean](src/yeoman-generators/generator-cean/README.md).
+
+The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
 
 The following examples assume that you have added the 'cean-cli' folder to your execution PATH
 
