@@ -11,7 +11,7 @@ var COMMANDS  = {  "start" : PATH + "/grunt", "create" : PATH + "/yo cean", "add
  */
 function usage() {
 
-	console.log("Use: cean-cli {install|run|create} {args}");
+	console.log("Use: cean-cli {install|run|create|add} {args}");
 }
 
 /**
@@ -40,24 +40,33 @@ function main() {
 
 			strcmd = mcmd;
 
-			//Pass the arguments
+			//Pass the arguments and construct the execution command
 			if ( cargs !== "" ) { 
 
+				//Default argument delimitter
+				delim = " ";
+
+				//For sub generators use ':' as delim
 				if (cmd == "add") {
 					
-					strcmd = strcmd + ":" + cargs;
+					delim = ":";
 				}
-				else {
-					strcmd = strcmd + " " + cargs;
+				
+				strcmd = strcmd + delim + cargs;
+				
+				//For create append the bower init command
+				if ( cmd == "create") {
+				
+					strcmd = strcmd + ";" + PATH + "/bower install";
 				}
 			}
 		
-			//console.log("cmd = " + strcmd);			
+			console.log("cean-cli - Executing: " + strcmd);			
 
 			spawn('sh', ['-c', strcmd], { stdio: 'inherit' });
 		}
 		else {
-			console.error("This command is not supported.");
+			console.error("This subcommand is not supported.");
 			usage();
 		}
 
@@ -66,6 +75,10 @@ function main() {
 		usage();
 
 	}
+   } else {
+   
+      console.error("You have to pass a subcommand!");
+      usage();
    }
 }
 
