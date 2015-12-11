@@ -1,10 +1,10 @@
 # A Command Line Interface for CEAN
 
-The idea is to provide a simple command line interface for application scaffolding. One of the advantages of using the CLI is that all the dependencie are installed locally with the CLI tool instead installing them globally to your Node.js installation.
+This provides you a simple command line interface for application scaffolding. One of the advantages of using the CLI is that all the dependencie are installed locally with the CLI tool instead installing them globally to your Node.js installation.
 
 ## Reqirements
 
-A Linux/Unix/MacOS environment with Node.js,NPM, Make, Git and Gcc has to be installed, e.g.:
+A Linux/Unix/MacOS environment with Node.js, Npm, Make, Git and GCC has to be installed, e.g.:
 
 ```
 sudo apt-get install gcc
@@ -20,10 +20,10 @@ sudo apt-get npm
 ### From a release
 
 ```
-npm install http://github.com/dmaier-couchbase/cean/blob/master/releases/cean-cli-0.0.1.tar.gz?raw=true
+npm install cean-cli
 ```
 
-This installs 'cean-cli' to '$HOME/node_modules/cean-cli'. You should add this directory to your execution $PATH.
+This installs 'cean-cli' to the folder '$HOME/node_modules/cean-cli'.
 
 ### Via the source code
 
@@ -46,20 +46,32 @@ Run the installation script:
 ./cean-cli install
 ```
 
-Add it to your execution $PATH!
-
-
 ## How to use
 
-The Cean CLI is bypassing commands to Yeoman commands. 
+The Cean CLI is bypassing specific commands. More details can be found here  [generator-cean](src/yeoman-generators/generator-cean/README.md).
+
+The command 'start' is referring to 'grunt'. The commands 'create' and 'add' are referring to 'yo'.
+
+The following examples assume that you have added the 'cean-cli' folder to your execution PATH
+
+```
+#Add to the end of your $HOME/.profile
+export PATH=$HOME/node_modules/cean-cli:$PATH
+```
+
+and that you are in an application directory of your choice:
+
+```
+cd $APP_DIR
+```
+
 
 ### Create a new application
 
 The following command can be used to create a new application:
 
 ```
-cd $APP_DIR
-./cean-cli create myapp 
+cean-cli create myapp 
 ```
 
 ### Sub-Generators
@@ -67,15 +79,13 @@ cd $APP_DIR
 The following shows how to use sub-generators:
 
 ```
-cd $APP_DIR
-./cean-cli add angular-controller TestCtrl myapp
-./cean-cli add angular-view test
-./cean-cli add angular-route test.html TestCtrl
+cean-cli add angular-controller TestCtrl myapp
+cean-cli add angular-view test
+cean-cli add angular-route test.html TestCtrl
 ```
 
 ### Start the application
 
 ```
-cd $APP_DIR
-./cean-cli start
+cean-cli start
 ```
